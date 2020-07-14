@@ -1,3 +1,4 @@
+{::options auto_ids="false" /}
 This contains an online college Admission form
 ## Made in HTML
 ## Style with CSS And Bootstrap 4 
