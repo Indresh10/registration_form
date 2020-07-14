@@ -1,0 +1,43 @@
+.radio{
+    background-color: #fff;
+    border:1px solid lightgrey;
+    border-radius: 0 5px 5px 0;
+}
+.radio label{
+    position: relative;
+    cursor: pointer;
+}
+.radio label input{
+    display:none;
+}
+.radio label span{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    background:rgb(212, 211, 211);
+    color:#000;
+    margin:10px 10px 0 10px;
+}
+.radio label input:checked ~ span{
+    color: #008eff ;
+    border: 1px solid #008eff;
+    box-shadow: 0 0 20px #008eff,0 0 80px #008eff,inset 0 0 10px #008eff;
+}
+.radio label input:checked ~ span.Male{
+    color: #07961a ;
+    border: 1px solid #07961a;
+    box-shadow: 0 0 20px #07961a,0 0 80px #07961a,inset 0 0 10px #07961a;
+}
+.radio label input:checked ~ span.Female{
+    color: #ff00ff ;
+    border: 1px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff,0 0 80px #ff00ff,inset 0 0 10px #ff00ff;
+}
+.radio label input:checked ~ span.Other{
+    color: #ff0000 ;
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 20px #ff0000,0 0 80px #ff0000,inset 0 0 10px #ff0000;
+}

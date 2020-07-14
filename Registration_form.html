@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- title of the page -->
+        <title>Addmission Form</title>
+        <!-- Styles -->
+        <style>
+            .headings{
+                margin-top: 30px;
+                font-family: galada, cursive;
+            }
+            .fakeimg{
+                width: 100%;
+                height: 500px;
+                background-color: darkgrey;
+            }
+            .contain{
+                background-color: lightgrey;
+            }
+            .container{
+                background-color: whitesmoke;
+            }
+            .form-row{
+                margin:15px 0 15px 0;
+            }
+            .logo{
+                width:15%;
+                height:15%;
+            }
+            .error{
+                display:none;
+                margin: 7px 0 0 10px;
+                text-align: center;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contain">
+            <div class="container">
+                <br>
+                <div class="jumbotron">
+                    <img src="logo.png" class="img-fluid img-responsive logo">
+                    Christ College Jagdalpur
+                </div>
+                <img src="College.jpg" class="img-fluid img-reponsive">
+                <h1 class="headings display-3"><center>Student Registration Form</center></h1>
+                <form>
+                    <h3>1)Personal Details</h3>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">First Name</span>
+                                </div>
+                                <input type="text" id="fname" class="form-control" onkeyup="Clear('fnameerr')">
+                            </div>
+                            <p id="fnameerr" class="error"></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Last Name</span>
+                                </div>
+                                <input type="text" id="lname" class="form-control" onkeyup="Clear('lnameerr')">
+                            </div>
+                            <p id="lnameerr" class="error"></p>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">DOB</span>
+                                </div>
+                                <input type="date" id="dob" class="form-control" onchange="Clear('doberr')">
+                            </div>
+                            <p id="doberr" class="error"></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Email</span>
+                                </div>
+                                <input type="email" id="email" class="form-control" onkeyup="Clear('emailerr')">
+                            </div>
+                            <p id="emailerr" class="error"></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Mobile No.</span>
+                                    <span class="input-group-text">+91</span>
+                                </div>
+                                <input type="tel" id="mobile" class="form-control" maxlength="10" onkeyup="Clear('moberr')">
+                            </div>
+                            <p id="moberr" class="error"></p>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Select Gender:</span>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="Gender" id="gender" value=""></label>
+                                    <label><input type="radio" name="Gender" id="gender" value="Male"><span class="Male" onclick="Clear('generr')">Male</span></label>
+                                    <label><input type="radio" name="Gender" id="gender" value="Female"><span class="Female" onclick="Clear('generr')">Female</span></label>
+                                    <label><input type="radio" name="Gender" id="gender" value="Other"><span class="Other" onclick="Clear('generr')">Other</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4"><p id="generr" class="error"></p></div>
+                    </div>
+                    <h4>&ensp;Address</h4>
+                    <div class="form-row">
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Street Address</span>
+                                </div>
+                                <textarea rows="3" class="form-control" id="staddress" onkeyup="Clear('adderr')"></textarea>
+                            </div>
+                            <p id="adderr" class="error"></p>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-4 input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">City</span>
+                            </div>
+                            <input type="text" id="city" class="form-control" onkeyup="Clear('cityerr')">
+                        </div>
+                        <div class="col-sm-4 input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">State</span>
+                            </div>
+                            <input type="text" id="state" class="form-control" onkeyup="Clear('stateerr')">
+                        </div>
+                        <div class="col-sm-4 input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Pin Code</span>
+                            </div>
+                            <input type="tel" maxlength="6" id="pin" class="form-control" onkeyup="Clear('pinerr')">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-4">
+                            <p id="cityerr" class="error"></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="stateerr" class="error"></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="pinerr" class="error"></p>
+                        </div>
+                    </div>
+                    <br />
+                    <h3>2)Qualification</h3>
+                    <div class="form-row">
+                    <table class="table table-bordered mx-auto" style="width:90%;background-color: #fff"> 
+                        <tr>
+                        <td align="center"><b>S.No.</b></td>
+                        <td align="center"><b>Exam</b></td>
+                        <td align="center"><b>Board</b></td>
+                        <td align="center"><b>Percentage</b></td>
+                        <td align="center"><b>Year of Passing</b></td>
+                        </tr>                
+                        <tr>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td>
+                            <input type="text" class="form-control" id="Xboard" maxlength="10" onkeyup="Clear('xboarderr')"/>
+                            <p id="xboarderr" class="error"></p>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" id="Xper" class="form-control" maxlength="5" onkeyup="Clear('xpererr')"/>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                            <p id="xpererr" class="error"></p>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="Xpass" maxlength="4" onkeyup="Clear('xpasserr')"/>
+                            <p id="xpasserr" class="error"></p>
+                        </td>
+                        </tr>                
+                        <tr>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td>
+                            <input type="text" class="form-control" id="XIIboard" maxlength="10" onkeyup="Clear('xiiboarderr')"/>
+                            <p id="xiiboarderr" class="error"></p>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" id="XIIper" maxlength="5" class="form-control" onkeyup="Clear('xiipererr')"/>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                            <p id="xiipererr" class="error"></p>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="XIIpass" maxlength="4" onkeyup="Clear('xiipasserr')"/>
+                            <p id="xiipasserr" class="error"></p>
+                        </td>
+                        </tr>                
+                        <tr>
+                        <td>3</td>
+                        <td>Graduation</td>
+                        <td>
+                            <input type="text" class="form-control" id="Gboard" maxlength="10" onkeyup="Clear('gboarderr')"/>
+                            <p id="gboarderr" class="error"></p>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" id="Gper" maxlength="5" class="form-control" onkeyup="Clear('gpererr')"/>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                            <p id="gpererr" class="error"></p>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="Gpass" maxlength="4" onkeyup="Clear('gpasserr')"/>
+                            <p id="gpasserr" class="error"></p>
+                        </td>
+                        </tr>                
+                        <tr>
+                        <td>4</td>
+                        <td>Masters</td>
+                        <td>
+                            <input type="text" class="form-control" id="Mboard" maxlength="10" onkeyup="Clear('mboarderr')"/>
+                            <p id="mboarderr" class="error"></p>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" id="Mper" maxlength="5" class="form-control" onkeyup="Clear('mpererr')"/>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                            <p id="mpererr" class="error"></p>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="Mpass" maxlength="4" onkeyup="Clear('mpasserr')"/>
+                            <p id="mpasserr" class="error"></p>
+                        </td>
+                        </tr>           
+                    </table>
+                </div>
+                <div>
+                    <h3>3)Course Applied for</h3><br>
+                    <div class="radio" style="width: auto;">
+                        <center>
+                        <label><input type="radio" name="course" id="cou" value=""></label>
+                        <label><input type="radio" name="course" id="cou" value="BCA" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BCA</span></label>
+                        <label><input type="radio" name="course" id="cou" value="BBA" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BBA</span></label>
+                        <label><input type="radio" name="course" id="cou" value="BCom" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">B.Com</span></label>
+                        <label><input type="radio" name="course" id="cou" value="BSc" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BSc</span></label>
+                        <label><input type="radio" name="course" id="cou" value="BA" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BA</span></label>
+                        </center>
+                    </div>
+                    <p id="couerr" class="error"></p>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-md-2">
+                        <button type="button" onclick="valid()" class="btn btn-primary form-control">Submit your form</button>
+                    </div>    
+                    <div class="col-md-2">
+                        <button type="reset" name="reset" class="btn btn-primary form-control" onclick="ClearAll()">Reset</button>
+                    </div>
+                </div>
+                <br>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
