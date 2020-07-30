@@ -19,7 +19,7 @@ var errors=['fnameerr','lnameerr','doberr','emailerr','moberr','generr',
 function valid() {
     for(i=0;i<=inputs.length-1;i++){ 
         if(i==3){
-            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById(inputs[i])))) {
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById(inputs[i]).value))) {
                 document.getElementById(errors[i]).style.display= "block";
                 document.getElementById(errors[i]).innerHTML='Invalid Email';      
             }
