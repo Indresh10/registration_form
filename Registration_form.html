@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -20,47 +21,59 @@
         <title>Addmission Form</title>
         <!-- Styles -->
         <style>
-            .headings{
+            .headings {
                 margin-top: 30px;
                 font-family: galada, cursive;
             }
-            .fakeimg{
+
+            .fakeimg {
                 width: 100%;
                 height: 500px;
                 background-color: darkgrey;
             }
-            .contain{
+
+            .contain {
                 background-color: lightgrey;
             }
-            .container{
+
+            .container {
                 background-color: whitesmoke;
             }
-            .form-row{
-                margin:15px 0 15px 0;
+
+            .form-row {
+                margin: 15px 0 15px 0;
                 padding: 5px;
             }
-            .logo{
-                width:15%;
-                height:15%;
+
+            .logo {
+                width: 15%;
+                height: 15%;
             }
-            .error{
-                display:none;
+
+            .error {
+                display: none;
                 margin: 7px 0 0 10px;
                 text-align: center;
                 color: red;
             }
+
         </style>
     </head>
+
     <body>
         <div class="contain">
             <div class="container">
                 <br>
                 <div class="jumbotron">
                     <img src="logo.png" class="img-fluid img-responsive logo">
-                    Christ College Jagdalpur
+                    <h1 class="headings display-3 d-inline">
+                        Global Education Center
+                    </h1>
                 </div>
                 <img src="College.jpg" class="img-fluid img-reponsive">
-                <h1 class="headings display-3"><center>Student Registration Form</center></h1>
+                <h1 class="headings display-3">
+                    <center>Student Registration Form</center>
+                </h1>
                 <form>
                     <h3>1)Personal Details</h3>
                     <div class="form-row">
@@ -131,7 +144,9 @@
                     </div>
                     <div class="form-row">
                         <div class="col-sm-4"></div>
-                        <div class="col-sm-4"><p id="generr" class="error"></p></div>
+                        <div class="col-sm-4">
+                            <p id="generr" class="error"></p>
+                        </div>
                     </div>
                     <h4>&ensp;Address</h4>
                     <div class="form-row">
@@ -179,128 +194,129 @@
                     <br />
                     <h3>2)Qualification</h3>
                     <div class="form-row">
-                    <table class="table table-bordered mx-auto" style="width:90%;background-color: #fff"> 
-                        <tr>
-                        <td align="center"><b>S.No.</b></td>
-                        <td align="center"><b>Exam</b></td>
-                        <td align="center"><b>Board</b></td>
-                        <td align="center"><b>Percentage</b></td>
-                        <td align="center"><b>Year of Passing</b></td>
-                        </tr>                
-                        <tr>
-                        <td>1</td>
-                        <td>Class X</td>
-                        <td>
-                            <input type="text" class="form-control" id="Xboard" maxlength="10" onkeyup="Clear('xboarderr')"/>
-                            <p id="xboarderr" class="error"></p>
-                        </td>
-                        <td>
-                            <div class="input-group">
-                                <input type="text" id="Xper" class="form-control" maxlength="5" onkeyup="Clear('xpererr')"/>
-                                <div class="input-group-append">
-                                    <span class="input-group-text">%</span>
-                                </div>
-                            </div>
-                            <p id="xpererr" class="error"></p>
-                        </td>
-                        <td>
-                            <input type="text" class="form-control" id="Xpass" maxlength="4" onkeyup="Clear('xpasserr')"/>
-                            <p id="xpasserr" class="error"></p>
-                        </td>
-                        </tr>                
-                        <tr>
-                        <td>2</td>
-                        <td>Class XII</td>
-                        <td>
-                            <input type="text" class="form-control" id="XIIboard" maxlength="10" onkeyup="Clear('xiiboarderr')"/>
-                            <p id="xiiboarderr" class="error"></p>
-                        </td>
-                        <td>
-                            <div class="input-group">
-                                <input type="text" id="XIIper" maxlength="5" class="form-control" onkeyup="Clear('xiipererr')"/>
-                                <div class="input-group-append">
-                                    <span class="input-group-text">%</span>
-                                </div>
-                            </div>
-                            <p id="xiipererr" class="error"></p>
-                        </td>
-                        <td>
-                            <input type="text" class="form-control" id="XIIpass" maxlength="4" onkeyup="Clear('xiipasserr')"/>
-                            <p id="xiipasserr" class="error"></p>
-                        </td>
-                        </tr>                
-                        <tr>
-                        <td>3</td>
-                        <td>Graduation</td>
-                        <td>
-                            <input type="text" class="form-control" id="Gboard" maxlength="10" onkeyup="Clear('gboarderr')"/>
-                            <p id="gboarderr" class="error"></p>
-                        </td>
-                        <td>
-                            <div class="input-group">
-                                <input type="text" id="Gper" maxlength="5" class="form-control" onkeyup="Clear('gpererr')"/>
-                                <div class="input-group-append">
-                                    <span class="input-group-text">%</span>
-                                </div>
-                            </div>
-                            <p id="gpererr" class="error"></p>
-                        </td>
-                        <td>
-                            <input type="text" class="form-control" id="Gpass" maxlength="4" onkeyup="Clear('gpasserr')"/>
-                            <p id="gpasserr" class="error"></p>
-                        </td>
-                        </tr>                
-                        <tr>
-                        <td>4</td>
-                        <td>Masters</td>
-                        <td>
-                            <input type="text" class="form-control" id="Mboard" maxlength="10" onkeyup="Clear('mboarderr')"/>
-                            <p id="mboarderr" class="error"></p>
-                        </td>
-                        <td>
-                            <div class="input-group">
-                                <input type="text" id="Mper" maxlength="5" class="form-control" onkeyup="Clear('mpererr')"/>
-                                <div class="input-group-append">
-                                    <span class="input-group-text">%</span>
-                                </div>
-                            </div>
-                            <p id="mpererr" class="error"></p>
-                        </td>
-                        <td>
-                            <input type="text" class="form-control" id="Mpass" maxlength="4" onkeyup="Clear('mpasserr')"/>
-                            <p id="mpasserr" class="error"></p>
-                        </td>
-                        </tr>           
-                    </table>
-                </div>
-                <div>
-                    <h3>3)Course Applied for</h3><br>
-                    <div class="radio" style="width: auto;">
-                        <center>
-                        <label><input type="radio" name="course" id="cou" value=""></label>
-                        <label><input type="radio" name="course" id="cou" value="BCA" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BCA</span></label>
-                        <label><input type="radio" name="course" id="cou" value="BBA" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BBA</span></label>
-                        <label><input type="radio" name="course" id="cou" value="BCom" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">B.Com</span></label>
-                        <label><input type="radio" name="course" id="cou" value="BSc" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BSc</span></label>
-                        <label><input type="radio" name="course" id="cou" value="BA" ><span style="width:100px;text-align: center" onclick="Clear('couerr')">BA</span></label>
-                        </center>
+                        <table class="table table-bordered mx-auto" style="width:90%;background-color: #fff">
+                            <tr>
+                                <td align="center"><b>S.No.</b></td>
+                                <td align="center"><b>Exam</b></td>
+                                <td align="center"><b>Board</b></td>
+                                <td align="center"><b>Percentage</b></td>
+                                <td align="center"><b>Year of Passing</b></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Class X</td>
+                                <td>
+                                    <input type="text" class="form-control" id="Xboard" maxlength="10" onkeyup="Clear('xboarderr')" />
+                                    <p id="xboarderr" class="error"></p>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" id="Xper" class="form-control" maxlength="5" onkeyup="Clear('xpererr')" />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                    <p id="xpererr" class="error"></p>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="Xpass" maxlength="4" onkeyup="Clear('xpasserr')" />
+                                    <p id="xpasserr" class="error"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Class XII</td>
+                                <td>
+                                    <input type="text" class="form-control" id="XIIboard" maxlength="10" onkeyup="Clear('xiiboarderr')" />
+                                    <p id="xiiboarderr" class="error"></p>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" id="XIIper" maxlength="5" class="form-control" onkeyup="Clear('xiipererr')" />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                    <p id="xiipererr" class="error"></p>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="XIIpass" maxlength="4" onkeyup="Clear('xiipasserr')" />
+                                    <p id="xiipasserr" class="error"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Graduation</td>
+                                <td>
+                                    <input type="text" class="form-control" id="Gboard" maxlength="10" onkeyup="Clear('gboarderr')" />
+                                    <p id="gboarderr" class="error"></p>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" id="Gper" maxlength="5" class="form-control" onkeyup="Clear('gpererr')" />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                    <p id="gpererr" class="error"></p>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="Gpass" maxlength="4" onkeyup="Clear('gpasserr')" />
+                                    <p id="gpasserr" class="error"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Masters</td>
+                                <td>
+                                    <input type="text" class="form-control" id="Mboard" maxlength="10" onkeyup="Clear('mboarderr')" />
+                                    <p id="mboarderr" class="error"></p>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" id="Mper" maxlength="5" class="form-control" onkeyup="Clear('mpererr')" />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                    <p id="mpererr" class="error"></p>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="Mpass" maxlength="4" onkeyup="Clear('mpasserr')" />
+                                    <p id="mpasserr" class="error"></p>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <p id="couerr" class="error"></p>
-                </div>
-                <br><br>
-                <div class="row">
-                    <div class="col-sm-4"></div>
-                    <div class="col-md-2">
-                        <button type="button" onclick="valid()" class="btn btn-primary form-control">Submit your form</button>
-                    </div>    
-                    <div class="col-md-2">
-                        <button type="reset" name="reset" class="btn btn-primary form-control" onclick="ClearAll()">Reset</button>
+                    <div>
+                        <h3>3)Course Applied for</h3><br>
+                        <div class="radio" style="width: auto;">
+                            <center>
+                                <label><input type="radio" name="course" id="cou" value=""></label>
+                                <label><input type="radio" name="course" id="cou" value="BCA"><span style="width:100px;text-align: center" onclick="Clear('couerr')">BCA</span></label>
+                                <label><input type="radio" name="course" id="cou" value="BBA"><span style="width:100px;text-align: center" onclick="Clear('couerr')">BBA</span></label>
+                                <label><input type="radio" name="course" id="cou" value="BCom"><span style="width:100px;text-align: center" onclick="Clear('couerr')">B.Com</span></label>
+                                <label><input type="radio" name="course" id="cou" value="BSc"><span style="width:100px;text-align: center" onclick="Clear('couerr')">BSc</span></label>
+                                <label><input type="radio" name="course" id="cou" value="BA"><span style="width:100px;text-align: center" onclick="Clear('couerr')">BA</span></label>
+                            </center>
+                        </div>
+                        <p id="couerr" class="error"></p>
                     </div>
-                </div>
-                <br>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-md-2">
+                            <button type="button" onclick="valid()" class="btn btn-primary form-control">Submit your form</button>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="reset" name="reset" class="btn btn-primary form-control" onclick="ClearAll()">Reset</button>
+                        </div>
+                    </div>
+                    <br>
                 </form>
             </div>
         </div>
         <script src="script.js"></script>
     </body>
+
 </html>
